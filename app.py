@@ -9,9 +9,9 @@ from sqlalchemy import create_engine
 
 app = Flask(__name__)
 iris = datasets.load_iris()
-engine = create_engine('postgres://fl0user:HlUWf7VTpyx1@ep-empty-king-96691665.eu-central-1.aws.neon.tech:5432/iris?sslmode=require')
+engine = create_engine('postgresql://fl0user:HlUWf7VTpyx1@ep-empty-king-96691665.eu-central-1.aws.neon.tech:5432/iris?sslmode=require')
 
-@app.route('/hola', methods= ["GET"])
+@app.route('/', methods= ["GET"])
 def saluda():
     
     return render_template("plantilla.html")     
