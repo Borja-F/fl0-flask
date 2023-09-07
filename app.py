@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 
 app = Flask(__name__)
 iris = datasets.load_iris()
-engine = create_engine('sqlite:///iris.db')
+engine = create_engine('postgres://fl0user:HlUWf7VTpyx1@ep-empty-king-96691665.eu-central-1.aws.neon.tech:5432/iris?sslmode=require')
 
 @app.route('/hola', methods= ["GET"])
 def saluda():
